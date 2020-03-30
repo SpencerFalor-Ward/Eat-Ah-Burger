@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/SpencerFalor-Ward/hw-12-eatAhBurger/issues"
   },
-  "homepage": "https://github.com/SpencerFalor-Ward/hw-12-eatAhBurger#readme"
+  "homepage": "https://github.com/SpencerFalor-Ward/hw-12-eatAhBurger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "mysql": "^2.18.1"
+  }
 }
