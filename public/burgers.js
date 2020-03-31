@@ -1,20 +1,20 @@
 //JS for page functionality
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $('.change-sleep').on('click', function(event) {
+    $('.change-devoured').on('click', function(event) {
         var id = $(this).data('id')
-        var newSleep = $(this).data('newsleep')
+        var eaten = $(this).data('devoured')
 
-        var newSleepState = {
-            sleepy: newSleep,
+        var burgerState = {
+            devoured: true,
         }
 
         // Send the PUT request.
-        $.ajax('/api/cats/' + id, {
+        $.ajax('/api/burgers/' + id, {
             type: 'PUT',
-            data: newSleepState,
+            data: burgerState,
         }).then(function() {
-            console.log('changed sleep to', newSleep)
+            console.log('Burger has been', eaten)
             // Reload the page to get the updated list
             location.reload()
         })
@@ -24,7 +24,7 @@ $(function() {
         // Make sure to preventDefault on a submit event.
         event.preventDefault()
 
-        var newCat = {
+        var newOrder = {
             name: $('#ca')
                 .val()
                 .trim(),
@@ -44,16 +44,16 @@ $(function() {
         })
     })
 
-    $('.delete-cat').on('click', function(event) {
-        var id = $(this).data('id')
+    // $('.delete-cat').on('click', function(event) {
+    //     var id = $(this).data('id')
 
-        // Send the DELETE request.
-        $.ajax('/api/cats/' + id, {
-            type: 'DELETE',
-        }).then(function() {
-            console.log('deleted cat', id)
-            // Reload the page to get the updated list
-            location.reload()
-        })
-    })
+    //     // Send the DELETE request.
+    //     $.ajax('/api/cats/' + id, {
+    //         type: 'DELETE',
+    //     }).then(function() {
+    //         console.log('deleted cat', id)
+    //         // Reload the page to get the updated list
+    //         location.reload()
+    //     })
+    // })
 })
