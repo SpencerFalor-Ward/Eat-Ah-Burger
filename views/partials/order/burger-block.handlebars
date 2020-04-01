@@ -1,8 +1,12 @@
 <li>
 	{{burger_name}}
 
-	<button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured1}}">
-		{{#if devoured1}}{{else}}Devour TIME!{{/if}}
+	<button class="change-devoured" data-id="{{id}}" data-devoured="{{ordered1}}">
+		{{#if ordered1}}Devour TIME!{{/if}}
+		{{!-- {{#if devoured1}}{{else}}Devour TIME!{{/if}} --}}
 	</button>
 
+<button class="delete-devoured" data-id="{{this.id}}">DELETE!</button>
 </li>
+
+{{!-- how to apply delete button after Devour Time was clicke and to only display the Devour Time --}}

@@ -8,12 +8,19 @@ $(function() {
         var burgerState = {
             devoured: true,
         }
+        // if (devoured === true) {
+        // $('.change-devoured').hide()
+        // }
 
         // Send the PUT request.
-        $.ajax('/api/burgers/' + id, {
-            type: 'PUT',
-            data: burgerState,
-        }).then(function() {
+        $.ajax(
+            '/api/burgers/' + id,
+            {
+                type: 'PUT',
+                data: burgerState,
+            }
+            // $('.change-devoured').hide()
+        ).then(function() {
             console.log('Burger has been', eaten)
             // Reload the page to get the updated list
             location.reload()
@@ -44,16 +51,16 @@ $(function() {
         })
     })
 
-    // $('.delete-cat').on('click', function(event) {
-    //     var id = $(this).data('id')
+    $('.delete-devoured').on('click', function(event) {
+        var id = $(this).data('id')
 
-    //     // Send the DELETE request.
-    //     $.ajax('/api/cats/' + id, {
-    //         type: 'DELETE',
-    //     }).then(function() {
-    //         console.log('deleted cat', id)
-    //         // Reload the page to get the updated list
-    //         location.reload()
-    //     })
-    // })
+        // Send the DELETE request.
+        $.ajax('/api/burgers/' + id, {
+            type: 'DELETE',
+        }).then(function() {
+            console.log('deleted burger', id)
+            // Reload the page to get the updated list
+            location.reload()
+        })
+    })
 })
