@@ -25,20 +25,20 @@ $(function() {
         event.preventDefault()
 
         var newOrder = {
-            name: $('#ca')
+            burger_name: $('#order')
                 .val()
                 .trim(),
-            sleepy: $('[name=sleepy]:checked')
-                .val()
-                .trim(),
+            // sleepy: $('[name=sleepy]:checked')
+            //     .val()
+            //     .trim(),
         }
-
+        console.log(newOrder)
         // Send the POST request.
-        $.ajax('/api/cats', {
+        $.ajax('/api/burgers', {
             type: 'POST',
-            data: newCat,
+            data: newOrder,
         }).then(function() {
-            console.log('created new cat')
+            console.log('created new order')
             // Reload the page to get the updated list
             location.reload()
         })

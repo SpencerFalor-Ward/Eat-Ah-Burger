@@ -19,8 +19,10 @@ router.get('/', function(req, res) {
 
 router.post('/api/burgers', function(req, res) {
     burger.insertOne(
-        ['burger_name', 'devoured'],
-        // [req.body.burger_name, req.body.devoured],
+        //if we are passing in the devoured filed then we need to include "false" in the array because passing will overide the default in the schema
+        //the name used in the backedn post must match the one used in the front end
+        ['burger_name'],
+        // [req.body.burger_name, false],
         [req.body.burger_name],
         function(result) {
             // Send back the ID of the new quote
