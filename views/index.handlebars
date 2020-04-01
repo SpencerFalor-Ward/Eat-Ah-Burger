@@ -2,8 +2,10 @@
 <h1>Eat Ah Burger!</h1>
 <div class="boxes">
   <div class="form-group">
-<h2 id="in">&#x1F432 Burgers ordered &#x1F432</h2>
 
+<div class="in">
+<h2>&#127828 Burgers ordered &#127828</h2>
+<div id="orderIn">
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
@@ -11,9 +13,12 @@
     {{/unless}}
   {{/each}}
 </ul>
+</div>
+</div>
+<div class="out">
+<h2>&#x1F432 Burgers devoured &#x1F432</h2>
 
-<h2 id="out">&#x1F432 Burgers devoured &#x1F432</h2>
-
+<div id="orderOut">
 <ul>
   {{#each burgers}}
     {{#if devoured}}
@@ -21,7 +26,8 @@
     {{/if}}
   {{/each}}
 </ul>
-
+</div>
+</div>
 <h2 id="make">Make an order</h2>
 
 <form class="create-form">
