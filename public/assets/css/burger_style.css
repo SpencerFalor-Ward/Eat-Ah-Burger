@@ -1,24 +1,28 @@
 body {
     text-align: center !important;
+    background-image: url(../img/121619085-vector-colorful-illustrations-on-the-burgers-theme-pictures-contain-realistic-shadows-and-glare-isol.jpg);
 }
 
 h1 {
-    font-family: 'Bungee Shade';
-    font-size: 100;
-    color: purple;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-        1px 1px 0 #000;
+    font-family: 'creepster';
+    font-size: 500%;
+
+    color: black;
+
     text-decoration: underline;
     margin: 0;
     padding: 0;
-    margin: 2% auto;
-    width: 800px;
-    text-shadow: 0px 0px 12px black;
-    clear: all;
+    margin: 5% auto;
+    width: max-content;
+
+    border-color: whitesmoke;
+    border: outset;
+    border-color: black;
+    box-shadow: -5px 5px 5px black;
+    background-color: rgb(240, 160, 57);
 }
 .largestBox {
-    height: auto;
-    width: 800px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
@@ -27,40 +31,39 @@ h1 {
 
 h2 {
     font-family: 'creepster';
+    font-size: 300%;
 }
 
 .in {
     color: green;
-    /* height: 94%; */
-    /* width: 360px; */
+
     float: left;
     border: solid;
     border-color: black;
-    /* color: rgb(173, 173, 173); */
-    /* background-color: rgb(229, 255, 0); */
-    box-shadow: 0px 0px 10px black;
-    /* box-shadow: 0px black; */
+
+    box-shadow: -5px 5px 5px black;
+    background-color: rgb(240, 160, 57);
+
     padding: 5px;
-    /* color: black; */
+
     font-size: 100%;
-    margin: 0% 4% 0 2%;
+    margin-right: 3%;
     text-align: center;
     display: inline-block;
 }
 
 .out {
     color: red;
-    /* height: 250px; */
-    /* width: 360px; */
+
     float: right;
     border: solid;
     border-color: black;
-    /* color: rgb(173, 173, 173); */
-    /* background-color: rgb(229, 255, 0); */
-    box-shadow: 0px 0px 10px black;
+
+    background-color: rgb(240, 160, 57);
+    box-shadow: -5px 5px 5px black;
     font-size: 100%;
     padding: 5px;
-    margin: 0% 4% 0 2%;
+    margin-left: 3%;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -76,15 +79,17 @@ h2 {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     height: 400px;
-    width: 840px;
+    width: 100%;
+
     margin-right: auto;
     margin-left: auto;
 }
 #make {
+    font-size: 325%;
     font-family: 'Faster One';
     color: gold;
     text-decoration: underline;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    text-shadow: -12px 2px 13px #000, 1px -1px 0 #000, -1px 1px 0 #000,
         1px 1px 0 #000;
 }
 .boxes {
@@ -92,9 +97,11 @@ h2 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    margin-top: 8%;
+    width: inherit;
 }
 li {
+    font-family: 'creepster';
+    font-size: 275%;
     padding: 5px;
     margin: 5px;
 }
@@ -103,15 +110,25 @@ li {
     font-weight: bold;
 }
 #order {
-    width: fit-content;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    background-color: rgb(240, 160, 57);
+    border: solid;
+    border-color: black;
+    box-shadow: -5px 5px 5px black;
+    font-size: 275%;
 }
 .create-form {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    height: 40%;
+    align-items: center;
 }
 
-button {
+#place {
+    font-family: 'creepster';
     color: black;
     height: fit-content;
     width: fit-content;
@@ -122,5 +139,16 @@ button {
     background-color: gold;
     box-shadow: 0px 0px 10px black;
     font-size: x-large;
-    /* font-weight: strong; */
+}
+#burgerAction {
+    color: black;
+    height: fit-content;
+    width: fit-content;
+    padding: 1%;
+    margin: 1% 0 0 !important;
+    border: solid;
+    border-color: black;
+    background-color: gold;
+    box-shadow: 0px 0px 10px black;
+    font-size: large;
 }

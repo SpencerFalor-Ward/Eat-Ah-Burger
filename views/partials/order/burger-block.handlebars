@@ -2,12 +2,12 @@
 	{{burger_name}}
 
 		{{#if ordered1}}
-	<button class="change-devoured" data-id="{{id}}" data-devoured="{{ordered1}}">
+	<button class="change-devoured" id="burgerAction" data-id="{{id}}" data-devoured="{{ordered1}}">
 		Devour TIME!
 	</button>
 		{{/if}}
 
 
-<button class="delete-devoured" data-id="{{this.id}}">DELETE!</button>
+<button class="delete-devoured" id="burgerAction" data-id="{{this.id}}">DELETE!</button>
 </li>
 
