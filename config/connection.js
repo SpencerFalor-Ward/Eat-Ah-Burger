@@ -1,6 +1,6 @@
 // Set up MySQL connection.
-var mysql = require('mysql')
-
+var mysql = require('mysql');
+var conneection = require('dotenv').config();
 var connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
@@ -17,7 +17,18 @@ connection = mysql.createConnection({
     database: 'burgers_db'
 })
     }
+// var mysql = require('mysql')
 
+// var connection
+// if (process.env.JAWSDB_URL) {
+//     // Database is JawsDB on Heroku
+//     // connection = mysql.createConnection(process.env.JAWSDB_URL)
+// } else {
+//     // Database is local
+//     connection = mysql.createConnection(process.env.pw)
+// }
+
+// var mysql = require('mysql')
 // Make connection.
 connection.connect(function(err) {
     if (err) {
