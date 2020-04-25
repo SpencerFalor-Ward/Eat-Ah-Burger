@@ -8,14 +8,14 @@ var connection = mysql.createConnection({
     password: 'root',
     database: 'burgers_db',
 })
-// if(process.env.JAWSBD_URL){
-//     connection = mysql.createConnection(process.env.JAWSBD_URL);}else{
-// connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password:'root',
-//     database: 'burgers_db'
-// })
+if(process.env.JAWSBD_URL){
+    connection = mysql.createConnection(process.env.JAWSBD_URL);}else{
+connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password:'root',
+    database: 'burgers_db'
+})
 //     }
 // var mysql = require('mysql')
 
