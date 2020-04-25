@@ -8,9 +8,7 @@ $(function() {
         var burgerState = {
             devoured: true,
         }
-        // if (devoured === true) {
-        // $('.change-devoured').hide()
-        // }
+       
 
         // Send the PUT request.
         $.ajax(
@@ -35,9 +33,7 @@ $(function() {
             burger_name: $('#order')
                 .val()
                 .trim(),
-            // sleepy: $('[name=sleepy]:checked')
-            //     .val()
-            //     .trim(),
+           
         }
         console.log(newOrder)
         // Send the POST request.
