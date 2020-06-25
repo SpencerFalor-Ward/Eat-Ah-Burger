@@ -20,7 +20,7 @@ npm install the following: mysql, express, express-handlebars
 
 ## Usage
 
-input your order in the make an order field, then you can click "Devour It" to move the ordered burger over to the devoured list. Clicking delete at anytime will remove the burger from the either list
+Input your order in the make an order field, then you can click "Devour It" to move the ordered burger over to the devoured list. Clicking delete at anytime will remove the burger from the either list
 
 ## Liscence
 
@@ -40,4 +40,4 @@ git at me
 
 ## Contact
 
-srfalorward@ucdavis.edu
+srpfw19@gmail.com
